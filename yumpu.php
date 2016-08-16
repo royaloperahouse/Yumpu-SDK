@@ -13,11 +13,19 @@ class Yumpu {
 	 */
 	
 	public $yumpuEndpoints;
-	public $config;
+	public $config = array ();
 
-	public function __construct() {
+    /**
+     * @param array $configOverride Inject config parameters to override the config.php file
+     */
+    public function __construct($configOverride = array ()) {
         global $config;
-        $this->config = $config;
+        if ($config) {
+            $this->config = $config;
+        }
+        if ($configOverride) {
+            $this->config = array_merge($this->config, $configOverride);
+        }
         $this->yumpuEndpoints = $this->config['yumpuEndpoints'];
         $this->log('DEBUG', 'Yumpu Class initialised');
     }
