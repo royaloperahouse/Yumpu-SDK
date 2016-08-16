@@ -1,0 +1,25 @@
+{
+    "name": "yumpu/yumpu-sdk",
+    "description": "Publish PDF documents on your website, tablet or mobile application.",
+    "version": "2.0",
+    "type": "library",
+    "keywords": ["Magazine", "PDF", "Publish"],
+    "homepage": "http://www.yumpu.com/",
+    "license": "GNU-GPL",
+    "authors": [
+        {
+            "name": "[i]-magazine AG",
+            "email": "info@i-magazine.de",
+            "homepage": "http://www.i-magazine.de/",
+            "role": "Publisher"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "yumpu.php"
+        ]
+    },
+    "require": {
+        "php": ">=4"
+    }
+}
